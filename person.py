@@ -1,4 +1,4 @@
-from utils import getPrompt, getNum, getUserInput, getId
+from utils import *
 
 class Person:
     def __init__(self, info_dict):
