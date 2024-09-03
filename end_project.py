@@ -7,8 +7,12 @@ from student import Student
 from enums import MenuOption
 from utils import *
 
+<<<<<<< HEAD
 print("programmer 2 changes something")
 print("this is from programmer 1")
+=======
+print("programmer 1 changes something")
+>>>>>>> a852576 (added print for programmer 1)
 
 def checkIfEmpty(data_dict):
     if not data_dict:
