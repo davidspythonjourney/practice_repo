@@ -7,6 +7,8 @@ from student import Student
 from enums import MenuOption
 from utils import *
 
+print("programmer 2 changes something")
+
 def checkIfEmpty(data_dict):
     if not data_dict:
         print("The dictionary is empty.")
