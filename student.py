@@ -1,5 +1,5 @@
 from person import Person
-from utils import getNum, getUserInput, getId
+from utils import *
 
 class Student(Person):
     def __init__(self, info_dict):

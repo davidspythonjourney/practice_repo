@@ -5,7 +5,7 @@ from employee import Employee
 from person import Person
 from student import Student
 from enums import MenuOption
-from utils import getPrompt, getNum, formatPersonDetails, checkId
+from utils import *
 
 def checkIfEmpty(data_dict):
     if not data_dict:
@@ -25,7 +25,7 @@ def saveNewEntry(data_dict: dict, avg_dict: dict):
             person = class_map[role](data_dict)
             data_dict[person.getId()] = person
             avg_dict["total_age"] += person.getAge()
-            avg_dict["num_entries"] += 1
+            avg_dict["num_entries"] = len(data_dict)
             print("Entry with ID: " + str(person.getId()) + " added successfully")
             break
         else:
@@ -114,9 +114,7 @@ def createCsv(data):
     if not data:
         return  
     file_name = getFileName()
-    output_columns = list(data[0].keys())
     output_df = pd.DataFrame(data)  
-    output_df = output_df[output_columns]
     output_df.to_csv(file_name, index=False)
 
 def start():
